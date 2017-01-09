@@ -7,14 +7,19 @@
   border-right: solid 1px #ccc;
 }
 .oxmod-stock-analysis .maintable td {
+  font-size: 13px;
   border-bottom: solid 1px #ccc;
   border-left: solid 1px #ccc;
-  padding: 2px 10px;
+  padding: 2px 5px;
 }
 .oxmod-stock-analysis .maintable tr:nth-child(2n-1) td {
   background-color: #eee;
 }
+.oxmod-stock-analysis .maintable tr:hover > td {
+  background-color: rgba(100, 100, 120, 0.8);
+}
 .oxmod-stock-analysis .maintable thead th {
+  font-size: 14px;
   border-bottom: solid 1px #999;
   border-left: solid 1px #999;
   background-color: #999;
