@@ -1,32 +1,74 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="demo.xsl"?>
 <root>
-  <env>
-    <domain>local</domain>
-  </env>
-  <p>
-    <title>demo page</title>
-    <desc>this is deme page</desc>
-    <owner>openxsl</owner>
-    <icon>//oxm1.cc/img/app_default.png</icon>
-  </p>
-  <data>
+    <env>
+        <domain>local</domain>
+    </env>
+    <p>
+        <title>demo page</title>
+        <desc>this is deme page</desc>
+        <owner>openxsl</owner>
+        <icon>//oxm1.cc/img/app_default.png</icon>
+    </p>
+    <data>
         <stock-analysis>
-        <i>
-            <symbol>
-                powerful camera
-            </symbol>
-            <close>
-                6171.88
-            </close>
-            <med>
-                4305.1
-            </med>
-            <avg>
-                555.77
-            </avg>
-        </i>
-    </stock-analysis>
-  </data>
+            <i>
+                <symbol>
+                    abc
+                </symbol>
+                <close>
+                    6171.88
+                </close>
+                <med>
+                    4305.1
+                </med>
+                <avg>
+                    555.77
+                </avg>
+            </i>
+            <i>
+                <symbol>
+                    efc
+                </symbol>
+                <close>
+                    12.88
+                </close>
+                <med>
+                    11.1
+                </med>
+                <avg>
+                    11.77
+                </avg>
+            </i>
+            <i>
+                <symbol>
+                    cc
+                </symbol>
+                <close>
+                    99.88
+                </close>
+                <med>
+                    122.1
+                </med>
+                <avg>
+                    132.77
+                </avg>
+            </i>
+            <i>
+                <symbol>
+                    box
+                </symbol>
+                <close>
+                    7.88
+                </close>
+                <med>
+                    5.1
+                </med>
+                <avg>
+                    5.77
+                </avg>
+            </i>
+        </stock-analysis>
+    </data>
 
 </root>
