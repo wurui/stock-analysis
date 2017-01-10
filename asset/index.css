@@ -3,14 +3,12 @@
 }
 .oxmod-stock-analysis .maintable {
   width: 100%;
-  border-top: solid 1px #ccc;
-  border-right: solid 1px #ccc;
 }
 .oxmod-stock-analysis .maintable td {
-  font-size: 13px;
+  font-size: 16px;
   border-bottom: solid 1px #ccc;
-  border-left: solid 1px #ccc;
   padding: 2px 5px;
+  height: 34px;
 }
 .oxmod-stock-analysis .maintable tr:nth-child(2n-1) td {
   background-color: #eee;
@@ -27,4 +25,21 @@
 }
 .oxmod-stock-analysis .maintable td {
   line-height: 1.6;
+}
+.oxmod-stock-analysis .percent {
+  display: inline-block;
+  min-width: 70px;
+  height: 24px;
+  color: #fff;
+  font-style: normal;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+}
+.oxmod-stock-analysis .positive {
+  background-color: #f00;
+}
+.oxmod-stock-analysis .negative {
+  background-color: #0c0;
 }
