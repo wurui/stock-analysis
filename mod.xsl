@@ -27,9 +27,11 @@
                     <xsl:for-each select="data/stock-analysis/i">
                     <tr data-href="{$detailLink}#{normalize-space(symbol)}">
                         <td><xsl:value-of select="symbol"/></td>
-                        <td><xsl:value-of select="close"/></td>
-                        <td align="right">
+                        <td>
                             <xsl:value-of select="med"/>
+                        </td>
+                        <td align="right">
+                            <xsl:value-of select="close"/>
                             <xsl:call-template name="percent"><xsl:with-param name="delta" select="(close - med) div med"/></xsl:call-template>
                         </td>
                     </tr>
