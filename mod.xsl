@@ -12,20 +12,16 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="/root" name="wurui.stock-analysis">
-        <xsl:param name="title" oxm:comment="title of module"/>
-        <xsl:param name="detailLink"/>
+        <xsl:param name="qs">symbol</xsl:param>
 
 
         <!-- className 'J_OXMod' required  -->
-        <div class="J_OXMod oxmod-stock-analysis" ox-mod="stock-analysis">
-            <h3>
-                <xsl:value-of select="$title"/>
-            </h3>
+        <div class="J_OXMod oxmod-stock-analysis" ox-mod="stock-analysis" data-qs="{$qs}">
             <table cellpadding="0" cellspacing="0" class="maintable">
 
                 <tbody>
                     <xsl:for-each select="data/stock-analysis/i">
-                    <tr data-href="{$detailLink}#{normalize-space(symbol)}">
+                    <tr data-href="{normalize-space(symbol)}">
                         <td><xsl:value-of select="symbol"/></td>
                         <td>
                             <xsl:value-of select="med"/>

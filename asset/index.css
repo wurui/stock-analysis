@@ -13,7 +13,6 @@
 .oxmod-stock-analysis .maintable tr:nth-child(2n-1) td {
   background-color: #eee;
 }
-.oxmod-stock-analysis .maintable tr:hover > td,
 .oxmod-stock-analysis .maintable tr.selected > td {
   background-color: rgba(100, 100, 120, 0.8);
   color: #fff;
