@@ -9,7 +9,9 @@ define(['oxjs'], function (OXJS) {
                 e.preventDefault();
                 $mod.find('tr.'+cls).removeClass(cls);
                 var symbol=$(this).addClass(cls).attr(attr);
-                $mod.OXPut({
+                //1。没有的情况下要用post....
+
+                $mod[lastSymbol?'OXPut':'OXPost']({
                     'user-select':{
                         selected:symbol,
                         uid:OXJS.getUID()
