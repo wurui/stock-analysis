@@ -1,33 +1,31 @@
-define(['oxjs'], function (OX) {
+define(['oxjs'], function (OXJS) {
     return {
         init: function ($mod) {
-            var lastFocusNode, cls = 'selected';
-            var qs = $mod.attr('data-qs'),
-                param = {},
-                checkSelect = function () {
-                    if (lastFocusNode)lastFocusNode.removeClass(cls);
-                    var symbol=OX.queryString(qs);//console.log(symbol)
-                    if(symbol) {
-                        lastFocusNode=$mod.find('tr[data-href="'+symbol+'"]').addClass(cls);
-                    }
-                };
-            $mod.on('tap', '[data-href]', function (e) {
+            //var $mod.OXModel('selected-target').on('change')
+            var cls = 'selected',attr='data-symbol',
+            lastSymbol=$mod.find('tr.selected').attr(attr)
+            
+            $mod.on('tap', 'tr['+attr+']', function (e) {
                 e.preventDefault();
-                //console.log('clicked');
-                /*
-                if (lastFocusNode)lastFocusNode.removeClass(cls);
-                lastFocusNode = $(this).addClass(cls);
-                */
+                $mod.find('tr.'+cls).removeClass(cls);
+                var symbol=$(this).addClass(cls).attr(attr);
+                $mod.OXPut({
+                    'user-select':{
+                        selected:symbol,
+                        uid:OXJS.getUID()
+                    }
+                });
+            }).on('ox:afterModelWrite',function(e,data){
+                //console.log(e,data)
+                if(data && data['user-select'] && data['user-select'].selected !=lastSymbol){
+                    $mod.OXRefresh();
 
-                param[qs] = this.getAttribute('data-href');
-
-                OX.changeState(param)
-
-                //location.href = this.getAttribute('data-href')
+                }
+                
             });
-            OX.onstatechanged(checkSelect);
+            //OX.onstatechanged(checkSelect);
 
-            checkSelect();
+            //checkSelect();
         }
     }
 })

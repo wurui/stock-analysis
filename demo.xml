@@ -11,11 +11,14 @@
         <icon>//oxm1.cc/img/app_default.png</icon>
     </p>
     <data>
+        <user-select>
+            <i>
+                <selected>NVO</selected>
+            </i>
+        </user-select>
         <stock-analysis>
             <i>
-                <symbol>
-                    NVO
-                </symbol>
+                <symbol>NVO</symbol>
                 <close>
                     6171.88
                 </close>
@@ -27,9 +30,7 @@
                 </avg>
             </i>
             <i>
-                <symbol>
-                    EFC
-                </symbol>
+                <symbol>EFC</symbol>
                 <close>
                     12.88
                 </close>
@@ -41,9 +42,7 @@
                 </avg>
             </i>
             <i>
-                <symbol>
-                    cc
-                </symbol>
+                <symbol>CC</symbol>
                 <close>
                     99.88
                 </close>
@@ -55,9 +54,7 @@
                 </avg>
             </i>
             <i>
-                <symbol>
-                    box
-                </symbol>
+                <symbol>BOX</symbol>
                 <close>
                     7.88
                 </close>
@@ -66,20 +63,6 @@
                 </med>
                 <avg>
                     7.77
-                </avg>
-            </i>
-            <i>
-                <symbol>
-                    box
-                </symbol>
-                <close>
-                    7.88
-                </close>
-                <med>
-                    5.1
-                </med>
-                <avg>
-                    5.77
                 </avg>
             </i>
         </stock-analysis>
