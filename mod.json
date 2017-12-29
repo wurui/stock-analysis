@@ -1,6 +1,6 @@
 {
   "name": "stock-analysis",
   "version": "1.0.0",
-  "apiDependencies": ["stock-analysis","user-selected"]
+  "apiDependencies": ["stock-analysis","user-select"]
 }
 
