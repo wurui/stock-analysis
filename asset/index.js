@@ -3,7 +3,7 @@ define(['oxjs'], function (OXJS) {
         init: function ($mod) {
             //var $mod.OXModel('selected-target').on('change')
             var cls = 'selected',attr='data-symbol',
-            lastSymbol=$mod.find('tr.selected').attr(attr)
+            lastSymbol=$mod.attr('data-selected');//
             
             $mod.on('tap', 'tr['+attr+']', function (e) {
                 e.preventDefault();

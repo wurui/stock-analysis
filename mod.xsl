@@ -12,11 +12,11 @@
         </xsl:choose>
     </xsl:template>-->
     <xsl:template match="/root" name="wurui.stock-analysis">
-        <xsl:variable name="selectedsymbol" select="data/user-select/i[1]/selected"/>
         <!-- className 'J_OXMod' required  -->
-        <div class="J_OXMod oxmod-stock-analysis" ox-mod="stock-analysis">
+        <xsl:variable name="selectedsymbol" select="data/user-select/i[1]/selected"/>
+        <div class="J_OXMod oxmod-stock-analysis" ox-mod="stock-analysis" data-selected="{$selectedsymbol}">
+            
             <table cellpadding="0" cellspacing="0" class="maintable">
-
                 <tbody>
                     <xsl:for-each select="data/stock-analysis/i">
                         
