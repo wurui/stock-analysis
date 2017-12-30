@@ -13,11 +13,11 @@ define(['oxjs'], function (OXJS) {
 
                 $mod[lastSymbol?'OXPut':'OXPost']({
                     'user-select':{
-                        selected:symbol,
+                        selected:lastSymbol=symbol,
                         uid:OXJS.getUID()
                     }
                 });
-            }).on('ox:afterModelWrite',function(e,data){
+            }).on(OXJS.MODEL_EVENT.AFTER_WRITE,function(e,data){
                 //console.log(e,data)
                 var newSymbol=data && data['user-select'] && data['user-select'].selected
                 if( newSymbol !=lastSymbol){
