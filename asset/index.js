@@ -19,9 +19,14 @@ define(['oxjs'], function (OXJS) {
                 });
             }).on('ox:afterModelWrite',function(e,data){
                 //console.log(e,data)
-                if(data && data['user-select'] && data['user-select'].selected !=lastSymbol){
+                var newSymbol=data && data['user-select'] && data['user-select'].selected
+                if( newSymbol !=lastSymbol){
+                    lastSymbol=newSymbol;
                     $mod.OXRefresh();
 
+                }
+                if(data && data['stock-analysis']){
+                    $mod.OXRefresh();
                 }
                 
             });
