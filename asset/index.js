@@ -30,6 +30,13 @@ define(['oxjs'], function (OXJS) {
                 }
                 
             });
+            $(window).on('pageshow',function(){
+                $mod.OXRefresh(null,function(){
+                    lastSymbol=$mod.attr('data-selected')
+                });
+
+
+            })
             //OX.onstatechanged(checkSelect);
 
             //checkSelect();
