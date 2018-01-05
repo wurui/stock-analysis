@@ -10,12 +10,12 @@
         <owner>openxsl</owner>
         <icon>//oxm1.cc/img/app_default.png</icon>
     </p>
-    <data>
+    <data><!--
         <user-select>
             <i>
                 <selected>NVO</selected>
             </i>
-        </user-select>
+        </user-select>-->
         <stock-analysis>
             <i>
                 <symbol>NVO</symbol>

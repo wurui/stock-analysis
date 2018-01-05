@@ -13,15 +13,17 @@
     </xsl:template>-->
     <xsl:template match="/root" name="wurui.stock-analysis">
         <!-- className 'J_OXMod' required  -->
-        <xsl:variable name="selectedsymbol" select="data/user-select/i[1]/selected"/>
-        <div class="J_OXMod oxmod-stock-analysis" ox-mod="stock-analysis" data-selected="{$selectedsymbol}">
+        <xsl:param oxm:type="href" name="linkto"/>
+        
+        <xsl:variable name="selectedsymbol" select="q/symbol"/>
+        <div class="J_OXMod oxmod-stock-analysis" ox-mod="stock-analysis" data-linkto="{$linkto}">
             
             <table cellpadding="0" cellspacing="0" class="maintable">
                 <tbody>
                     <xsl:for-each select="data/stock-analysis/i">
-                        
                         <xsl:variable name="delta" select="(close - med) div med"/>
                         <tr data-symbol="{normalize-space(symbol)}">
+                            
                             <xsl:if test="symbol = $selectedsymbol">
                                 <xsl:attribute name="class">selected</xsl:attribute>
                             </xsl:if>
